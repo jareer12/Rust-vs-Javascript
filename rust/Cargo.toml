@@ -1,0 +1,18 @@
+[package]
+name = "dart"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sysinfo = "0.24.6"
+serde = "1.0.139"
+serde_json = "1.0.82"
+mysql = { version = "*", default-features = false, features = ["rustls-tls", "buffer-pool"] }
+flate2 = { version = "*", default-features = false, features = ["zlib"] }
+mysql_common = { version = "*", default-features = false, features = ["bigdecimal03", "time03", "uuid"]}
+
+[dependencies.rocket]
+version = "0.5.0-rc.1"
+features = ["json"]
